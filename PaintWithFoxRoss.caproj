@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>PaintWithFoxRoss</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>25ry73pzgpg8a</unique-id>
+    <saved-with-version>25800</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>2558</width>
+        <height>1504</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Fond" sid="560460486551979">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TileTableau" sid="229939659685170">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\Windows-10\Dropbox\Construct 2\Projet FrenchGameJam6\Textures\Tile.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ImageTile" sid="772260790977497">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Mouse" sid="679369665187750">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="PaletteCouleur" sid="312392912460398">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211727862608391" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Noir" sid="686602527841642">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520975494983781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Vert_Claire" sid="610532943849758">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382934011626144" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Vert" sid="771805479722618">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948629437198992" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Pastel" sid="552737442224146">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458411919157033" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Bleu_Claire" sid="414592145769287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333882076900167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Bleu_Fonce" sid="924539228516117">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406463022655975" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Violet" sid="950271394252265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174906934675865" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Rose" sid="459646375439107">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="307559278967164" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Blanc" sid="763399524020788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="276220635703586" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Rouge" sid="116474199724781">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381124151597177" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Orange" sid="666723789353388">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="191532371445775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Palette_Jaune" sid="816413043340887">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="448276209406216" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.128" y="0.196" />
+                            <point x="0.608" y="0.056" />
+                            <point x="0.9" y="0.448" />
+                            <point x="0.828" y="0.856" />
+                            <point x="0.104" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Decors" sid="998610393566946">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236834425853618" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projet perso\Jeux\Construct 2\Projet FrenchGameJam6\Textures\Decors.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="2ndTableau" sid="940107686664522">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109330688331802" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Windows-10\Dropbox\Construct 2\Projet FrenchGameJam6\Textures\2nd Tableau.png">
+                        <collision-poly>
+                            <point x="0.112979" y="0.192154" />
+                            <point x="0.24785" y="0.5" />
+                            <point x="0.190774" y="0.675532" />
+                            <point x="0.150117" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FoxRoss" sid="534189611828188">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Timer" sid="865663291690163">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757979721993642" speed="5">
+                    <frame duration="1" hotspotX="0.500739" hotspotY="0.500754" original-source="C:\Users\Windows-10\Dropbox\Construct 2\Projet FrenchGameJam6\Textures\FoxRossContent.png">
+                        <collision-poly>
+                            <point x="0.144756" y="0.147813" />
+                            <point x="0.499261" y="0.0497738" />
+                            <point x="0.83161" y="0.171946" />
+                            <point x="0.905465" y="0.499246" />
+                            <point x="0.779911" y="0.775264" />
+                            <point x="0.499261" y="1" />
+                            <point x="0.236337" y="0.758673" />
+                            <point x="0.0856721" y="0.499246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="891882390158739">
+            <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="Log" sid="380655408298455">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Audio" sid="557265156416608">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Peinture" sid="603262013728102">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891417636084605" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500924" original-source="C:\Users\Windows-10\Dropbox\Construct 2\Projet FrenchGameJam6\Textures\Tableau fini.png" />
+                    <frame duration="1" hotspotX="0.501466" hotspotY="0.5" original-source="C:\Users\toshiba\Desktop\William\Projet FrenchGameJam6\Textures\TableauCombat.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_JoueurRestant" sid="938555530571680">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextFin" sid="424001832926252">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Fond_Marron" sid="668027041142794">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Texte_rp_fin" sid="960701022718825">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Rejouer" sid="150722354686892">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CartePostal" sid="150328595931237">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703122253387715" speed="5">
+                    <frame duration="1" hotspotX="0.501" hotspotY="0.500713" original-source="D:\Projet perso\Jeux\Construct 2\Projet FrenchGameJam6\Textures\Carte postal.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TableauFinal" sid="968717849346140">
+            <plugin id="Tilemap" />
+            <texture original-source="D:\Projet perso\Jeux\Construct 2\Projet FrenchGameJam6\Textures\TileTableau.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Sprite" sid="117842377317594">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793728864437346" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501665" original-source="D:\Projet perso\Jeux\Construct 2\Projet FrenchGameJam6\Textures\Lettre.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="489185355653728">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="446141869375727" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="137013394999013">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667980920278769" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501961" original-source="D:\Projet perso\Jeux\Construct 2\Projet FrenchGameJam6\Textures\BonPourFox.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Rejoindre" sid="490272585011002">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AVousDeCommencer" sid="541545697155495">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Jeudewilliam" sid="321767718026407">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Menu.xml</layout>
+        <layout>Jeu.xml</layout>
+        <layout>Fin.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>EvFoxRoss.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="Function" uid="20" />
+        <global-instance type="Audio" uid="22">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>Yes</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <music-folder name="Son V2">
+            <file name="1-Presentation.ogg" />
+            <file name="2-Presentation_Paysage.ogg" />
+            <file name="3-Presentation_Palette.ogg" />
+            <file name="10-Debut_Nuage.ogg" />
+            <file name="11-Fin_Nuage_2_Mort.ogg" />
+            <file name="12-Debut_Soleil.ogg" />
+            <file name="13-Fin_Soleil_Debut_Aura_Fin_Julien.ogg" />
+            <file name="14-Fin_Aura_Fin_dernier_bot.ogg" />
+            <file name="15-Debut_Fond_Bleu.ogg" />
+            <file name="16-Fin_Fond_Bleu.ogg" />
+            <file name="17-Fox_Contre_Vous.ogg" />
+            <file name="18-Debut_Defi.ogg" />
+            <file name="19-Peindre_Avec_Quelquun_Autant_Talent.ogg" />
+            <file name="20-Quelquun_qui_a_50x_votre_niveau.ogg" />
+            <file name="21-Tu_as_peur.ogg" />
+            <file name="22-Un_peu_de_bleu.ogg" />
+            <file name="23-Un_peu_dorange.ogg" />
+            <file name="24-Ca_c_Bon.ogg" />
+            <file name="25-Fin_Gagne.ogg" />
+            <file name="25-Fin_Perdu.ogg" />
+            <file name="4-Debut_Montagne.ogg" />
+            <file name="5-Fin_Montagne.ogg" />
+            <file name="6-Timing_Montage_Debut_Point.ogg" />
+            <file name="7-Fin_Tache.ogg" />
+            <file name="8-Eleve_Part_Pasouf.ogg" />
+            <file name="9-Debut_Antenne.ogg" />
+        </music-folder>
+        <file name="Voix Fox.ogg" />
+        <file name="Musique.ogg" />
+        <file name="Finlose.ogg" />
+        <file name="FinWin.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

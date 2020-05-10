@@ -1,0 +1,1787 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EvFoxRoss</name>
+    <events>
+        <variable constant="0" name="Couleur_Choisie" sid="463528847260143" static="0" type="number">0</variable>
+        <variable comment="Decrit la cause de la fin ! " constant="0" name="Cause_fin" sid="663778049670469" static="0" type="text"></variable>
+        <event-block sid="407792691502573">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="378594218363233" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Rejoindre</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="761329433586999" type="System">
+                    <param id="0" name="Layout">Jeu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="941901541406775">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="923744859139950" type="System" />
+                <condition id="-8" name="Compare two values" sid="997867692330161" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Jeu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="397149331012527" type="System">
+                    <param id="0" name="Width">2558</param>
+                    <param id="1" name="Height">1504</param>
+                </action>
+                <action id="3" name="Set tile range" sid="917133936579627" type="TileTableau">
+                    <param id="0" name="Tile X">0</param>
+                    <param id="1" name="Tile Y">0</param>
+                    <param id="2" name="Width">32</param>
+                    <param id="3" name="Height">32</param>
+                    <param id="4" name="Tile">0</param>
+                    <param id="5" name="State">0</param>
+                </action>
+                <action id="0" name="Play" sid="203042072920558" type="Audio">
+                    <param id="0" name="Audio file">Musique</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-35</param>
+                    <param id="1" name="Tag (optional)">&quot;Musique&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="964988123344555" type="Function">
+                    <param id="0" name="Name">&quot;1-Presentation&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="407895222118605" type="Function">
+                    <param id="0" name="Name">&quot;16-Fin_Fond_Bleu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Push" sid="243814673041379" type="Log">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Value">&quot;----- Debut du jeu ------&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556490052738792">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="430523785243459" type="System" />
+                <condition id="-8" name="Compare two values" sid="567554978862590" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Fin&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="430066641000377" type="System">
+                    <param id="0" name="Width">1708</param>
+                    <param id="1" name="Height">960</param>
+                </action>
+                <action id="0" name="Set text" sid="411574176662134" type="TextFin">
+                    <param id="0" name="Text">Cause_fin</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="489194211956590">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="648248183201366" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Rejouer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="301283014157268" type="Audio">
+                    <param id="0" name="Tag">&quot;Musique&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="756050594164040" type="Audio">
+                    <param id="0" name="Tag">&quot;Finlose&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="851664420391113" type="Audio">
+                    <param id="0" name="Tag">&quot;Finwin&quot;</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="275913540822617" type="System">
+                    <param id="0" name="Layout">&quot;Jeu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="189089010308259">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="299068375936369" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="844966212688315">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="528661037117411" type="Mouse">
+                            <param id="0" name="Object">TileTableau</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="181984077114850" type="TileTableau">
+                            <param id="0" name="Tile X">TileTableau.PositionToTileX(Mouse.X)</param>
+                            <param id="1" name="Tile Y">TileTableau.PositionToTileY(Mouse.Y)</param>
+                            <param id="2" name="Tile">Couleur_Choisie</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="842674767415175" title="Couleur">
+            <sub-events>
+                <event-block sid="606277495418104">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="373891342377886" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Blanc</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="337872007171478" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="847808847293042" type="Function">
+                            <param id="0" name="Name">&quot;Animation Fox&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="945299170308755">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="826444829740861" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Noir</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="304709167999526" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921507691937892">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="917097378502923" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Rouge</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="730007571637963" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="534155488693128">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="920262047312206" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Orange</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="401824657818342" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582423660175874">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="565265108065625" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Jaune</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="263983790218462" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630894318131116">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="131631903825528" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Vert_Claire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="537932250905462" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="177397062330092">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="768995560966617" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Vert</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="293526834263295" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="325163539386177">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="159188798303279" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Pastel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="763820222294951" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411832455344909">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="534281106756088" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Bleu_Claire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="633572640738287" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="408842855992903">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="998642683892856" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Bleu_Fonce</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="696033960307251" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411835156348661">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="552964329329454" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Violet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="281189921093847" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="496449542517345">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="852121250299284" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Palette_Rose</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="634461256869838" type="System">
+                            <param id="0" name="Variable">Couleur_Choisie</param>
+                            <param id="1" name="Value">11</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="118628778966979" title="Fonction">
+            <sub-events>
+                <variable constant="0" name="Temp" sid="293703829814518" static="1" type="number">0</variable>
+                <event-block sid="719670989914993">
+                    <conditions>
+                        <condition id="0" name="On function" sid="823160919556543" type="Function">
+                            <param id="0" name="Name">&quot;Animation Fox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="291239265384444" type="System">
+                            <param id="0" name="Variable">Temp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="102297594780714">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="425855350668908" type="System">
+                                    <param id="0" name="Count">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="349765278885383" type="System">
+                                    <param id="0" name="Seconds">0.05*loopindex</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="606559716201421" type="System">
+                                    <param id="0" name="Variable">Temp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="741544396009580" type="FoxRoss">
+                                    <param id="0" name="X">534+10*Temp</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="625051590019430">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="863647608309233" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="346130044852075" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="955605003302672" type="System">
+                                    <param id="0" name="Variable">Temp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="247487365122143">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="841298926611348" type="System">
+                                            <param id="0" name="Count">30</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="670079417520667" type="System">
+                                            <param id="0" name="Seconds">0.05*loopindex</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="873774924778013" type="System">
+                                            <param id="0" name="Variable">Temp</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="637532184872874" type="FoxRoss">
+                                            <param id="0" name="X">834-10*Temp</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="795500843920952">
+                    <conditions>
+                        <condition id="0" name="On function" sid="916018764604969" type="Function">
+                            <param id="0" name="Name">&quot;Sortir Fox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="237421488952649" type="System">
+                            <param id="0" name="Variable">Temp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="324355248460650">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="105630703163425" type="System">
+                                    <param id="0" name="Count">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="672157676858341" type="System">
+                                    <param id="0" name="Seconds">0.05*loopindex</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="218189082656594" type="System">
+                                    <param id="0" name="Variable">Temp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="800462547856157" type="FoxRoss">
+                                    <param id="0" name="X">534+10*Temp</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="357209145334041">
+                    <conditions>
+                        <condition id="0" name="On function" sid="289303067268082" type="Function">
+                            <param id="0" name="Name">&quot;Rentrer Fox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="970458533275050" type="System">
+                            <param id="0" name="Variable">Temp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="235173644375948">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="478597383763630" type="System">
+                                    <param id="0" name="Count">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="361518656719193" type="System">
+                                    <param id="0" name="Seconds">0.05*loopindex</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="460262301217083" type="System">
+                                    <param id="0" name="Variable">Temp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="495593239101613" type="FoxRoss">
+                                    <param id="0" name="X">834-10*Temp</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" inactive="1" sid="997191929340625" title="Pas_touche">
+                    <sub-events>
+                        <event-block sid="598347295096985">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="283148855350455" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">TileTableau</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="663636590405669" type="Audio" />
+                                <action id="-9" name="Set value" sid="808937515844659" type="System">
+                                    <param id="0" name="Variable">Cause_fin</param>
+                                    <param id="1" name="Value">&quot;Tu peint quoi ? On ne t&apos;as pas demander de commencer, non ? La prochaine fois, tu attendras...&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="130566156621264" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="682118434755384">
+                    <conditions>
+                        <condition id="0" name="On function" sid="330457660897090" type="Function">
+                            <param id="0" name="Name">&quot;Test_Blanc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="154060340512125" type="System">
+                            <param id="0" name="Variable">Temp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="5" name="Push" sid="613577842211878" type="Log">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Value">&quot;----- Debut test blanc ------&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="301317628431224">
+                            <conditions>
+                                <condition id="-10" name="For" sid="631696374996823" type="System">
+                                    <param id="0" name="Name">&quot;Test Blanc Colonne&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">23</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="854421825961747">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="375577784621958" type="System">
+                                            <param id="0" name="Name">&quot;Test Blanc Ligne&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="385308016121216">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="522229830051136" type="System">
+                                                    <param id="0" name="First value">TileTableau.TileAt(loopindex(&quot;Test Blanc Colonne&quot;), loopindex(&quot;Test Blanc Ligne&quot;))</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="322226572953000" type="System">
+                                                    <param id="0" name="First value">TileTableau.TileAt(loopindex(&quot;Test Blanc Colonne&quot;), loopindex(&quot;Test Blanc Ligne&quot;))</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="382691518537694" type="System">
+                                                    <param id="0" name="Variable">Temp</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action disabled="1" id="5" name="Push" sid="507968215203624" type="Log">
+                                                    <param id="0" name="Where">1</param>
+                                                    <param id="1" name="Value">&quot;OK pas blanc detecté en &quot;&amp;loopindex(&quot;Test Blanc Colonne&quot;)&amp;&quot; et &quot;&amp;loopindex(&quot;Test Blanc Ligne&quot;)</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                                <action disabled="1" id="5" name="Push" sid="319083428344899" type="Log">
+                                                    <param id="0" name="Where">1</param>
+                                                    <param id="1" name="Value">TileTableau.TileAt(loopindex(&quot;Test Blanc Colonne&quot;), loopindex(&quot;Test Blanc Ligne&quot;))</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="513269901531424">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="635598836757772" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="230479348718958">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="363780035427908" type="System">
+                                            <param id="0" name="Variable">Temp</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="549239318311256" type="Audio" />
+                                        <action id="-9" name="Set value" sid="283397294201452" type="System">
+                                            <param id="0" name="Variable">Cause_fin</param>
+                                            <param id="1" name="Value">&quot;C&apos;est affligeant de voir que tu t&apos;endore dans mon cours...&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="956728208378085" type="System">
+                                            <param id="0" name="Layout">Fin</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="792738210036576">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="787403942348315" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="366631698737459" type="Function">
+                                            <param id="0" name="Name">&quot;6-Timing_Montage_Debut_Point&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="347653970579695" title="Deroulement Fonction">
+            <sub-events>
+                <event-block sid="832839409828095">
+                    <conditions>
+                        <condition id="0" name="On function" sid="662870680114966" type="Function">
+                            <param id="0" name="Name">&quot;1-Presentation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="989266112985857" type="Audio">
+                            <param id="0" name="Audio file">1-Presentation</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;1&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="989837336186814" type="Function">
+                            <param id="0" name="Name">&quot;Sortir Fox&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359939472472828">
+                    <conditions>
+                        <condition id="0" name="On function" sid="968930346886923" type="Function">
+                            <param id="0" name="Name">&quot;2-Presentation_Paysage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="615257359136198" type="Audio">
+                            <param id="0" name="Audio file">2-Presentation_Paysage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;2&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="879357747709269" type="Peinture">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="145443651516039" type="Peinture">
+                            <param id="0" name="X">1241</param>
+                            <param id="1" name="Y">340</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="339956841084179" type="Peinture">
+                            <param id="0" name="Width">403</param>
+                            <param id="1" name="Height">608</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="932352269481347" type="Peinture">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="940948947361341">
+                    <conditions>
+                        <condition id="0" name="On function" sid="654076132577986" type="Function">
+                            <param id="0" name="Name">&quot;3-Presentation_Palette&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="476232095882806" type="Audio">
+                            <param id="0" name="Audio file">3-Presentation_Palette</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;3&quot;</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="440881054299649" type="Peinture">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="535502911481175" type="PaletteCouleur">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="660592021057551" type="Palette_Blanc">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="983712479200961" type="Palette_Bleu_Claire">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="951810612699338" type="Palette_Bleu_Fonce">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="679149356031942" type="Palette_Jaune">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="328367738986758" type="Palette_Noir">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="586400435035296" type="Palette_Vert_Claire">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="119671405212481" type="Palette_Orange">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="589321583657254" type="Palette_Pastel">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="595940731264368" type="Palette_Rose">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="607003026233961" type="Palette_Rouge">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="346440511047264" type="Palette_Vert">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="675176706564756" type="Palette_Violet">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="535744725334961" type="Function">
+                            <param id="0" name="Name">&quot;Rentrer Fox&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="970674385205970" type="System">
+                            <param id="0" name="Group name">&quot;Pas_touche&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="919156395552453">
+                    <conditions>
+                        <condition id="0" name="On function" sid="398735370993369" type="Function">
+                            <param id="0" name="Name">&quot;4-Debut_Montagne&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="323177055136102" type="System">
+                            <param id="0" name="Group name">&quot;Pas_touche&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="977863480680769" type="Audio">
+                            <param id="0" name="Audio file">4-Debut_Montagne</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;4&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="504122306313580" type="AVousDeCommencer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="613409264557162" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="456074701945282" type="AVousDeCommencer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="547919721607550">
+                    <conditions>
+                        <condition id="0" name="On function" sid="505524817239267" type="Function">
+                            <param id="0" name="Name">&quot;5-Fin_Montagne&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="983899448851016" type="Audio">
+                            <param id="0" name="Audio file">5-Fin_Montagne</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;5&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="108383726564959">
+                    <conditions>
+                        <condition id="0" name="On function" sid="901563641110177" type="Function">
+                            <param id="0" name="Name">&quot;6-Timing_Montage_Debut_Point&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="739712976164180" type="Audio">
+                            <param id="0" name="Audio file">6-Timing_Montage_Debut_Point</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;6&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771380705776004">
+                    <conditions>
+                        <condition id="0" name="On function" sid="947008710526002" type="Function">
+                            <param id="0" name="Name">&quot;7-Fin_Tache&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="385381594880248" type="Audio">
+                            <param id="0" name="Audio file">7-Fin_Tache</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;7&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="644217721622874">
+                    <conditions>
+                        <condition id="0" name="On function" sid="446962042522613" type="Function">
+                            <param id="0" name="Name">&quot;8-Eleve_Part_Pasouf&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="714117909495850" type="Audio">
+                            <param id="0" name="Audio file">8-Eleve_Part_Pasouf</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;8&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319120090694689">
+                    <conditions>
+                        <condition id="0" name="On function" sid="259179739542774" type="Function">
+                            <param id="0" name="Name">&quot;9-Debut_Antenne&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="896248535613395" type="Audio">
+                            <param id="0" name="Audio file">9-Debut_Antenne</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;9&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="672837784748239">
+                    <conditions>
+                        <condition id="0" name="On function" sid="101188347790631" type="Function">
+                            <param id="0" name="Name">&quot;10-Debut_Nuage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="141238696120207" type="Audio">
+                            <param id="0" name="Audio file">10-Debut_Nuage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;10&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="636930884823990">
+                    <conditions>
+                        <condition id="0" name="On function" sid="379953219372091" type="Function">
+                            <param id="0" name="Name">&quot;11-Fin_Nuage_2_Mort&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="286963853323369" type="Audio">
+                            <param id="0" name="Audio file">11-Fin_Nuage_2_Mort</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;11&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600711676283518">
+                    <conditions>
+                        <condition id="0" name="On function" sid="433496610964697" type="Function">
+                            <param id="0" name="Name">&quot;12-Debut_Soleil&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="906832087224876" type="Audio">
+                            <param id="0" name="Audio file">12-Debut_Soleil</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;12&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497238744510428">
+                    <conditions>
+                        <condition id="0" name="On function" sid="363575176696584" type="Function">
+                            <param id="0" name="Name">&quot;13-Fin_Soleil_Debut_Aura_Fin_Julien&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="128103067821268" type="Audio">
+                            <param id="0" name="Audio file">13-Fin_Soleil_Debut_Aura_Fin_Julien</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;13&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="845710435285868">
+                    <conditions>
+                        <condition id="0" name="On function" sid="830106637156687" type="Function">
+                            <param id="0" name="Name">&quot;14-Fin_Aura_Fin_dernier_bot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="728089528464834" type="Audio">
+                            <param id="0" name="Audio file">14-Fin_Aura_Fin_dernier_bot</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;14&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999440093967073">
+                    <conditions>
+                        <condition id="0" name="On function" sid="512261244433075" type="Function">
+                            <param id="0" name="Name">&quot;15-Debut_Fond_Bleu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="443191278590348" type="Audio">
+                            <param id="0" name="Audio file">15-Debut_Fond_Bleu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;15&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="705239111925888">
+                    <conditions>
+                        <condition id="0" name="On function" sid="718020986083551" type="Function">
+                            <param id="0" name="Name">&quot;16-Fin_Fond_Bleu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="315579329941318" type="Audio">
+                            <param id="0" name="Audio file">16-Fin_Fond_Bleu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;16&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="364397840907477">
+                    <conditions>
+                        <condition id="0" name="On function" sid="684843535828066" type="Function">
+                            <param id="0" name="Name">&quot;17-Fox_Contre_Vous&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="472753988970124" type="Audio">
+                            <param id="0" name="Audio file">17-Fox_Contre_Vous</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;17&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267768561708058">
+                    <conditions>
+                        <condition id="0" name="On function" sid="823600977074514" type="Function">
+                            <param id="0" name="Name">&quot;18-Debut_Defi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="555469896090319" type="Audio">
+                            <param id="0" name="Audio file">18-Debut_Defi</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;18&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735111286431169">
+                    <conditions>
+                        <condition id="0" name="On function" sid="113949610878508" type="Function">
+                            <param id="0" name="Name">&quot;19-Peindre_Avec_Quelquun_Autant_Talent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="148829462216862" type="Audio">
+                            <param id="0" name="Audio file">19-Peindre_Avec_Quelquun_Autant_Talent</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;19&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245222900336303">
+                    <conditions>
+                        <condition id="0" name="On function" sid="466890957138021" type="Function">
+                            <param id="0" name="Name">&quot;20-Quelquun_qui_a_50x_votre_niveau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="185086930930693" type="Audio">
+                            <param id="0" name="Audio file">20-Quelquun_qui_a_50x_votre_niveau</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;20&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="264044800271668">
+                    <conditions>
+                        <condition id="0" name="On function" sid="582799105628008" type="Function">
+                            <param id="0" name="Name">&quot;21-Tu_as_peur&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="586428337006633" type="Audio">
+                            <param id="0" name="Audio file">21-Tu_as_peur</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;21&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="572313601510149">
+                    <conditions>
+                        <condition id="0" name="On function" sid="407521058556705" type="Function">
+                            <param id="0" name="Name">&quot;22-Un_peu_de_bleu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="892589464692063" type="Audio">
+                            <param id="0" name="Audio file">22-Un_peu_de_bleu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;22&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164506106869896">
+                    <conditions>
+                        <condition id="0" name="On function" sid="235007324601877" type="Function">
+                            <param id="0" name="Name">&quot;23-Un_peu_dorange&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="913320330829731" type="Audio">
+                            <param id="0" name="Audio file">23-Un_peu_dorange</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;23&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735462345054582">
+                    <conditions>
+                        <condition id="0" name="On function" sid="323189148990064" type="Function">
+                            <param id="0" name="Name">&quot;24-Ca_c_Bon&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="197889091502929" type="Audio">
+                            <param id="0" name="Audio file">24-Ca_c_Bon</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;24&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="305326795625622">
+                    <conditions>
+                        <condition id="0" name="On function" sid="465304137687130" type="Function">
+                            <param id="0" name="Name">&quot;25-Fin_Gagne&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="959168780406384" type="Audio">
+                            <param id="0" name="Audio file">25-Fin_Gagne</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;25_Gagne&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="437751222108761">
+                    <conditions>
+                        <condition id="0" name="On function" sid="777950332855649" type="Function">
+                            <param id="0" name="Name">&quot;25-Fin_Perdu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="468519750941821" type="Audio">
+                            <param id="0" name="Audio file">25-Fin_Perdu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;25_Perdu&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="787051728160761" title="Deroulement Lien">
+            <sub-events>
+                <event-group description="" sid="668132945226876" title="Debut Cours">
+                    <sub-events>
+                        <event-block sid="112032975325779">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="931623713574816" type="Audio">
+                                    <param id="0" name="Tag">&quot;2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="601833268638594" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="167697524061213" type="Function">
+                                    <param id="0" name="Name">&quot;3-Presentation_Palette&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Patrick part, donc on set visible le texte</comment>
+                        <event-block sid="799646395877211">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="178658861866823" type="Audio">
+                                    <param id="0" name="Tag">&quot;3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="756104740041807" type="Text_JoueurRestant">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="774322067190297" type="Function">
+                                    <param id="0" name="Name">&quot;4-Debut_Montagne&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="952880332888314">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="530645030554593" type="Audio">
+                                    <param id="0" name="Tag">&quot;4&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="146362613661312" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;6 joueurs restant&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="407727437806788" type="Function">
+                                    <param id="0" name="Name">&quot;5-Fin_Montagne&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="678477116130849">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="965950313543296" type="Audio">
+                                    <param id="0" name="Tag">&quot;5&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="135672072819065" type="System">
+                                    <param id="0" name="Seconds">5.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="393256644466256" type="Function">
+                                    <param id="0" name="Name">&quot;Test_Blanc&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106491022178072">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="852482699905000" type="Audio">
+                                    <param id="0" name="Tag">&quot;6&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="310866709969387" type="System">
+                                    <param id="0" name="Seconds">20</param>
+                                </action>
+                                <action id="0" name="Call function" sid="608983003074982" type="Function">
+                                    <param id="0" name="Name">&quot;7-Fin_Tache&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="532035947475027" type="Function">
+                                    <param id="0" name="Name">&quot;Sortir Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="894295099403257">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="244626205697129" type="Audio">
+                                    <param id="0" name="Tag">&quot;7&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="521387160680037" type="TileTableau">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="245873548848500" type="Function">
+                                    <param id="0" name="Name">&quot;Rentrer Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="572824070690989" type="Function">
+                                    <param id="0" name="Name">&quot;8-Eleve_Part_Pasouf&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="516210958107875">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="221663696558401" type="Audio">
+                                    <param id="0" name="Tag">&quot;8&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="378648032552992" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;5 joueurs restant&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="634970484965594" type="TileTableau">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="371093883269291" type="Function">
+                                    <param id="0" name="Name">&quot;9-Debut_Antenne&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="444040416667616">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="780105604240556" type="Audio">
+                                    <param id="0" name="Tag">&quot;9&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="173882046982377" type="System">
+                                    <param id="0" name="Seconds">15</param>
+                                </action>
+                                <action id="0" name="Call function" sid="697689943564764" type="Function">
+                                    <param id="0" name="Name">&quot;10-Debut_Nuage&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="122234237279309">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="348204197940015" type="Audio">
+                                    <param id="0" name="Tag">&quot;10&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="364175775609456" type="System">
+                                    <param id="0" name="Seconds">10</param>
+                                </action>
+                                <action id="0" name="Call function" sid="745440678469847" type="Function">
+                                    <param id="0" name="Name">&quot;11-Fin_Nuage_2_Mort&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="457670845806909">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="195515961278717" type="Audio">
+                                    <param id="0" name="Tag">&quot;11&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="841014008066721" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;3 joueurs restant&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="799971593396037" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="526669096915776" type="Function">
+                                    <param id="0" name="Name">&quot;12-Debut_Soleil&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865760267583899">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="728865253162502" type="Audio">
+                                    <param id="0" name="Tag">&quot;12&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="146384192188179" type="System">
+                                    <param id="0" name="Seconds">20</param>
+                                </action>
+                                <action id="0" name="Call function" sid="625100540378915" type="Function">
+                                    <param id="0" name="Name">&quot;13-Fin_Soleil_Debut_Aura_Fin_Julien&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="435857602665419">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="614556010248380" type="Audio">
+                                    <param id="0" name="Tag">&quot;13&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="804716525404724" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;2 joueurs restant&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="972004393064550" type="System">
+                                    <param id="0" name="Seconds">20</param>
+                                </action>
+                                <action id="0" name="Call function" sid="480913647038999" type="Function">
+                                    <param id="0" name="Name">&quot;14-Fin_Aura_Fin_dernier_bot&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="382135796926123">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="320029844682266" type="Audio">
+                                    <param id="0" name="Tag">&quot;14&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="423533239870475" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;Vous êtes le dernier joueur en vie ! &quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="359049045258843" type="Function">
+                                    <param id="0" name="Name">&quot;15-Debut_Fond_Bleu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155635494762572">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="272128682133088" type="Audio">
+                                    <param id="0" name="Tag">&quot;15&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="641595877662107" type="Function">
+                                    <param id="0" name="Name">&quot;16-Fin_Fond_Bleu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576223740770221">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="610437604266836" type="Audio">
+                                    <param id="0" name="Tag">&quot;16&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="507874463562955" type="Function">
+                                    <param id="0" name="Name">&quot;17-Fox_Contre_Vous&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="503797791379422">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="660958575056691" type="Audio">
+                                    <param id="0" name="Tag">&quot;17&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="814650909853237" type="Function">
+                                    <param id="0" name="Name">&quot;Sortir Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Set text" sid="175387127965784" type="Text_JoueurRestant">
+                                    <param id="0" name="Text">&quot;Copiez le tableau ! Vite !&quot;</param>
+                                </action>
+                                <action id="3" name="Set tile range" sid="172549389272715" type="TileTableau">
+                                    <param id="0" name="Tile X">0</param>
+                                    <param id="1" name="Tile Y">0</param>
+                                    <param id="2" name="Width">32</param>
+                                    <param id="3" name="Height">32</param>
+                                    <param id="4" name="Tile">0</param>
+                                    <param id="5" name="State">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="718811788213762" type="Peinture">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="173658094171225" type="Peinture">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="289525173060261" type="Peinture">
+                                    <param id="0" name="X">1211</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="704814267365443" type="Peinture">
+                                    <param id="0" name="Width">588</param>
+                                    <param id="1" name="Height">890</param>
+                                </action>
+                                <action id="0" name="Call function" sid="525396444847269" type="Function">
+                                    <param id="0" name="Name">&quot;18-Debut_Defi&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="360221021243775" type="System">
+                                    <param id="0" name="Group name">&quot;Test_Final&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="854752560266427">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="181453465063303" type="Audio">
+                                    <param id="0" name="Tag">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="648499706791974" type="Function">
+                                    <param id="0" name="Name">&quot;2-Presentation_Paysage&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="740238673061013" title="Dernier défi">
+                    <sub-events>
+                        <event-block sid="786394223643532">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="651263208824489" type="Audio">
+                                    <param id="0" name="Tag">&quot;18&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="101972802734136" type="Function">
+                                    <param id="0" name="Name">&quot;Rentrer Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="374344264120351" type="System">
+                                    <param id="0" name="Seconds">15</param>
+                                </action>
+                                <action id="0" name="Call function" sid="953187087207674" type="Function">
+                                    <param id="0" name="Name">&quot;19-Peindre_Avec_Quelquun_Autant_Talent&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="541544079204487">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="471552359574139" type="Audio">
+                                    <param id="0" name="Tag">&quot;19&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="700751072826857" type="System">
+                                    <param id="0" name="Seconds">10</param>
+                                </action>
+                                <action id="0" name="Call function" sid="441511386931196" type="Function">
+                                    <param id="0" name="Name">&quot;20-Quelquun_qui_a_50x_votre_niveau&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="762637942203253">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="750367548757187" type="Audio">
+                                    <param id="0" name="Tag">&quot;20&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="767534051826905" type="System">
+                                    <param id="0" name="Seconds">50</param>
+                                </action>
+                                <action id="0" name="Call function" sid="974968301730775" type="Function">
+                                    <param id="0" name="Name">&quot;21-Tu_as_peur&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="817961936604780" type="Function">
+                                    <param id="0" name="Name">&quot;Animation Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="814907747656647">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="791683661783485" type="Audio">
+                                    <param id="0" name="Tag">&quot;21&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="178640090563956" type="System">
+                                    <param id="0" name="Seconds">50</param>
+                                </action>
+                                <action id="0" name="Call function" sid="345714655984140" type="Function">
+                                    <param id="0" name="Name">&quot;22-Un_peu_de_bleu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="831117674278069">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="640398241691837" type="Audio">
+                                    <param id="0" name="Tag">&quot;22&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="591346571398312" type="System">
+                                    <param id="0" name="Seconds">20</param>
+                                </action>
+                                <action id="0" name="Call function" sid="644686981587076" type="Function">
+                                    <param id="0" name="Name">&quot;23-Un_peu_dorange&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="547830094176088">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="642025326151663" type="Audio">
+                                    <param id="0" name="Tag">&quot;23&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="679267476928874" type="System">
+                                    <param id="0" name="Seconds">40</param>
+                                </action>
+                                <action id="0" name="Call function" sid="186663550943838" type="Function">
+                                    <param id="0" name="Name">&quot;24-Ca_c_Bon&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="838937134388657">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="608409291632983" type="Audio">
+                                    <param id="0" name="Tag">&quot;24&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="538175876885727" type="System">
+                                    <param id="0" name="Seconds">60</param>
+                                </action>
+                                <action id="0" name="Call function" sid="569580635064424" type="Function">
+                                    <param id="0" name="Name">&quot;25-Fin_Perdu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="524778609578061" type="Function">
+                                    <param id="0" name="Name">&quot;Sortir Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="358837522917986">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="741951625057067" type="Audio">
+                                    <param id="0" name="Tag">&quot;25_Perdu&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="454236801125507" type="Function">
+                                    <param id="0" name="Name">&quot;Rentrer Fox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="511426069010242" type="System">
+                                    <param id="0" name="Group name">&quot;Test_Final&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="686922641990383" type="Audio" />
+                                <action id="-9" name="Set value" sid="434030225360901" type="System">
+                                    <param id="0" name="Variable">Cause_fin</param>
+                                    <param id="1" name="Value">&quot;Désoler, tout le monde ne peut pas être aussi talentueux que moi :(&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="912724772574042" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="553970883101390">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="844494967602570" type="Audio">
+                            <param id="0" name="Tag">&quot;25_Gagne&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="769609644770409" type="System">
+                            <param id="0" name="Group name">&quot;Test_Final&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="945100417512331" type="Audio" />
+                        <action id="-9" name="Set value" sid="649827472086437" type="System">
+                            <param id="0" name="Variable">Cause_fin</param>
+                            <param id="1" name="Value">&quot;Bravo (si l&apos;on peut dire), tu m&apos;as battu, je m&apos;en vais ! Je reviendrais plus fort pour te battre bientôt !&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="123652085632786" type="System">
+                            <param id="0" name="Layout">Fin</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="584015641889821" title="Test_Final">
+            <sub-events>
+                <event-block sid="768077383319184">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="157998175267583" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="474829658060113">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="338326514321952" type="TileTableau">
+                                    <param id="0" name="Tile X">4</param>
+                                    <param id="1" name="Tile Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Tile">6</param>
+                                </condition>
+                                <condition id="0" name="Compare tile at" sid="116399307542915" type="TileTableau">
+                                    <param id="0" name="Tile X">2</param>
+                                    <param id="1" name="Tile Y">11</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Tile">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="298939461943490" type="Log">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">&quot;Check 1&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="868065390391446">
+                                    <conditions>
+                                        <condition id="0" name="Compare tile at" sid="905052120793647" type="TileTableau">
+                                            <param id="0" name="Tile X">0</param>
+                                            <param id="1" name="Tile Y">6</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">8</param>
+                                        </condition>
+                                        <condition id="0" name="Compare tile at" sid="907400940073217" type="TileTableau">
+                                            <param id="0" name="Tile X">10</param>
+                                            <param id="1" name="Tile Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">8</param>
+                                        </condition>
+                                        <condition id="0" name="Compare tile at" sid="108621936117930" type="TileTableau">
+                                            <param id="0" name="Tile X">16</param>
+                                            <param id="1" name="Tile Y">6</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">8</param>
+                                        </condition>
+                                        <condition id="0" name="Compare tile at" sid="853403899117816" type="TileTableau">
+                                            <param id="0" name="Tile X">22</param>
+                                            <param id="1" name="Tile Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="528989431468406" type="Log">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Value">&quot;Check 2&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="487690177159313">
+                                            <conditions>
+                                                <condition id="0" name="Compare tile at" sid="932934207914672" type="TileTableau">
+                                                    <param id="0" name="Tile X">0</param>
+                                                    <param id="1" name="Tile Y">16</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Tile">3</param>
+                                                </condition>
+                                                <condition id="0" name="Compare tile at" sid="270645185483142" type="TileTableau">
+                                                    <param id="0" name="Tile X">12</param>
+                                                    <param id="1" name="Tile Y">10</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Tile">3</param>
+                                                </condition>
+                                                <condition id="0" name="Compare tile at" sid="913385791078845" type="TileTableau">
+                                                    <param id="0" name="Tile X">22</param>
+                                                    <param id="1" name="Tile Y">14</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Tile">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="463926203657816" type="Log">
+                                                    <param id="0" name="Where">1</param>
+                                                    <param id="1" name="Value">&quot;Check 3&quot;</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="933432828616789">
+                                                    <conditions>
+                                                        <condition id="0" name="Compare tile at" sid="479935184211448" type="TileTableau">
+                                                            <param id="0" name="Tile X">0</param>
+                                                            <param id="1" name="Tile Y">19</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Tile">2</param>
+                                                        </condition>
+                                                        <condition id="0" name="Compare tile at" sid="946207911854651" type="TileTableau">
+                                                            <param id="0" name="Tile X">12</param>
+                                                            <param id="1" name="Tile Y">12</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Tile">2</param>
+                                                        </condition>
+                                                        <condition id="0" name="Compare tile at" sid="862454207562625" type="TileTableau">
+                                                            <param id="0" name="Tile X">22</param>
+                                                            <param id="1" name="Tile Y">17</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Tile">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Push" sid="219088175424055" type="Log">
+                                                            <param id="0" name="Where">1</param>
+                                                            <param id="1" name="Value">&quot;Check 4&quot;</param>
+                                                            <param id="2" name="Axis">0</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="858717139791310">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare tile at" sid="926769091961063" type="TileTableau">
+                                                                    <param id="0" name="Tile X">0</param>
+                                                                    <param id="1" name="Tile Y">21</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">7</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare tile at" sid="497871180320290" type="TileTableau">
+                                                                    <param id="0" name="Tile X">12</param>
+                                                                    <param id="1" name="Tile Y">15</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">7</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare tile at" sid="266530111763391" type="TileTableau">
+                                                                    <param id="0" name="Tile X">22</param>
+                                                                    <param id="1" name="Tile Y">19</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">7</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="5" name="Push" sid="916267408811323" type="Log">
+                                                                    <param id="0" name="Where">1</param>
+                                                                    <param id="1" name="Value">&quot;Check 5&quot;</param>
+                                                                    <param id="2" name="Axis">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="481918464072791">
+                                                                    <conditions>
+                                                                        <condition id="0" name="Compare tile at" sid="686566827221673" type="TileTableau">
+                                                                            <param id="0" name="Tile X">13</param>
+                                                                            <param id="1" name="Tile Y">24</param>
+                                                                            <param id="2" name="Comparison">0</param>
+                                                                            <param id="3" name="Tile">4</param>
+                                                                        </condition>
+                                                                        <condition id="0" name="Compare tile at" sid="563448726339426" type="TileTableau">
+                                                                            <param id="0" name="Tile X">15</param>
+                                                                            <param id="1" name="Tile Y">24</param>
+                                                                            <param id="2" name="Comparison">0</param>
+                                                                            <param id="3" name="Tile">6</param>
+                                                                        </condition>
+                                                                        <condition id="0" name="Compare tile at" sid="167158335305704" type="TileTableau">
+                                                                            <param id="0" name="Tile X">14</param>
+                                                                            <param id="1" name="Tile Y">24</param>
+                                                                            <param id="2" name="Comparison">0</param>
+                                                                            <param id="3" name="Tile">6</param>
+                                                                        </condition>
+                                                                        <condition disabled="1" id="0" inverted="1" name="Compare tile at" sid="408655491949015" type="TileTableau">
+                                                                            <param id="0" name="Tile X">16</param>
+                                                                            <param id="1" name="Tile Y">27</param>
+                                                                            <param id="2" name="Comparison">0</param>
+                                                                            <param id="3" name="Tile">5</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="5" name="Push" sid="274037091959763" type="Log">
+                                                                            <param id="0" name="Where">1</param>
+                                                                            <param id="1" name="Value">&quot;Check 6&quot;</param>
+                                                                            <param id="2" name="Axis">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="938321464302013">
+                                                                            <conditions>
+                                                                                <condition id="5" inverted="1" name="Is tag playing" sid="554802587946716" type="Audio">
+                                                                                    <param id="0" name="Tag">&quot;25_Gagne&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="0" name="Play" sid="971174460422002" type="Audio">
+                                                                                    <param id="0" name="Audio file">25-Fin_Gagne</param>
+                                                                                    <param id="2" name="Loop">0</param>
+                                                                                    <param id="3" name="Volume">0</param>
+                                                                                    <param id="1" name="Tag (optional)">&quot;25_Gagne&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
